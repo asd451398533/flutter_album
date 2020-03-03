@@ -16,7 +16,6 @@ import 'package:flutter_common/flutter_common.dart';
 import 'package:gengmei_flutter_plugin/ScanImagePlugn.dart';
 import 'package:gengmei_flutter_plugin/gengmei_flutter_plugin.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:photos_saver/photos_saver.dart';
 import 'DirBean.dart';
 
 Map<String, List<ScanImageItem>> paseAlbum(Object event) {
@@ -332,7 +331,6 @@ class AlbumModel extends BaseModel {
         if (!haveIt) {
           _dirList.add(new DirBean(foldName, 1, File(item.path)));
         }
-//        compute(saveToAlbum,item.realPath);
       }
     }).whenComplete(() {
       dirLive.notifyView(_dirList);
@@ -455,9 +453,4 @@ class AlbumModel extends BaseModel {
 //      });
 //    });
 //  }
-}
-
-void saveToAlbum(String path) async{
-  await ImageGallerySaver.saveImage(File(path).readAsBytesSync());
-  await PhotosSaver.saveFile(fileData: File(path).readAsBytesSync());
 }
