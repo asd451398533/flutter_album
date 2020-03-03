@@ -125,8 +125,8 @@ class AlbumPreviewState extends State<AlbumPreviewPage>
                                     if (data.data == null || data.data == 0) {
                                       return Container(
                                         alignment: Alignment.topRight,
-                                        width: 100,
-                                        height: 100,
+                                        width: 110,
+                                        height: 110,
                                         padding:
                                             EdgeInsets.only(right: 22, top: 39),
                                         child: baseText(
@@ -140,8 +140,8 @@ class AlbumPreviewState extends State<AlbumPreviewPage>
                                         },
                                         child: Container(
                                           alignment: Alignment.topRight,
-                                          width: 100,
-                                          height: 100,
+                                          width: 110,
+                                          height: 110,
                                           padding: EdgeInsets.only(
                                               right: 22, top: 39),
                                           child: baseText("下一步(${data.data})",
