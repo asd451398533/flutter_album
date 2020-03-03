@@ -60,6 +60,7 @@ class AlbumModel extends BaseModel {
   bool showCamera = true;
   final String provider;
   int _maxCount = 1;
+  ImageGallerySaver imageGallerySaver;
 
   get nowDirName {
     if (_nowDirName == MainDir) {

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import 'page/album/AlbumPage.dart';
 
-/// A Calculator.
 class GMAblum {
   Widget getAlbumPage(
       bool showCamera, int bigSelectSize, List<String> selectedImages,
