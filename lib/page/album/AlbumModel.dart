@@ -301,6 +301,7 @@ class AlbumModel extends BaseModel {
       return;
     }
 //    AlbumRepository.getInstance().nativeCamera(provider).listen((data) {
+    String realPath;
     JumpUtil.jumpToPageRight(context, CameraPage()).then((data) {
       if (data == null) {
         Toast.show(context, "没有拍摄照片");
@@ -311,6 +312,7 @@ class AlbumModel extends BaseModel {
           ..path = data[1]
           ..isVideo = false
           ..foldName = "gengmeiAlbum";
+        realPath=data[0];
 //        item.realPath = data["realPath"] as String;
 //        item.path = data["path"] as String;
 //        item.isVideo = false;
@@ -330,14 +332,16 @@ class AlbumModel extends BaseModel {
         if (!haveIt) {
           _dirList.add(new DirBean(foldName, 1, File(item.path)));
         }
-        compute(saveToAlbum,item.realPath);
+//        compute(saveToAlbum,item.realPath);
       }
     }).whenComplete(() {
       dirLive.notifyView(_dirList);
       albumLive.notifyView(repo.getMainValue()[_nowDirName]);
       selectSizeLive.notifyView(
           repo.getSelectPhoto().length + repo.getSelectVideo().length);
-
+      File(realPath).readAsBytes().then((value){
+        ImageGallerySaver.saveImage(value);
+      });
     }).catchError((error) {
       Toast.show(context, error);
       print(error);
@@ -454,6 +458,6 @@ class AlbumModel extends BaseModel {
 }
 
 void saveToAlbum(String path) async{
-//  await ImageGallerySaver.saveImage(File(path).readAsBytesSync());
+  await ImageGallerySaver.saveImage(File(path).readAsBytesSync());
   await PhotosSaver.saveFile(fileData: File(path).readAsBytesSync());
 }
