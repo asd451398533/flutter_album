@@ -454,6 +454,6 @@ class AlbumModel extends BaseModel {
 }
 
 void saveToAlbum(String path) async{
-  await ImageGallerySaver.saveImage(File(path).readAsBytesSync());
+//  await ImageGallerySaver.saveImage(File(path).readAsBytesSync());
   await PhotosSaver.saveFile(fileData: File(path).readAsBytesSync());
 }
