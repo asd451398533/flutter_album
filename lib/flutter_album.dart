@@ -1,6 +1,7 @@
 library flutter_album;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_album/page/camera/CameraPage.dart';
 
 import 'page/album/AlbumPage.dart';
 
@@ -15,4 +16,5 @@ class GMAblum {
     return AlbumPage(provider, showCamera, bigSelectSize, selectedImages,
         maxVideoCount, videoSelectPath, noVideoHint, needAiCamera);
   }
+
 }

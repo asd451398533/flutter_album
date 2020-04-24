@@ -8,10 +8,10 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_album/sdk/photo_view_gallery.dart';
+import 'package:flutter_album/sdk/src/photo_view_computed_scale.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gengmei_flutter_plugin/ScanImagePlugn.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:photo_view/photo_view_gallery.dart';
 
 import '../../BaseComponent.dart';
 import 'AlbumPreviewModel.dart';
