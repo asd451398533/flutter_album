@@ -26,8 +26,8 @@ class AlbumRepository {
   List<String> _selectList = List();
   List<String> _selectVideoList = List();
 
-  Observable<Map<String, List<ScanImageItem>>> scanPhoneImg() {
-    return Observable.fromFuture(GengmeiFlutterPlugin.phoneImages());
+  Stream<Map<String, List<ScanImageItem>>> scanPhoneImg() {
+    return Stream.fromFuture(GengmeiFlutterPlugin.phoneImages());
   }
 
   void updataMainValue(Map<String, List<ScanImageItem>> value) {
@@ -56,11 +56,11 @@ class AlbumRepository {
     return _selectVideoList;
   }
 
-  Observable<Map> nativeCamera(String provider) {
-    return Observable.fromFuture(GengmeiFlutterPlugin.nativeCamera(provider));
+  Stream<Map> nativeCamera(String provider) {
+    return Stream.fromFuture(GengmeiFlutterPlugin.nativeCamera(provider));
   }
 
-  Observable<String> aiCamera() {
+  Stream<String> aiCamera() {
 //    return Observable.fromFuture(GengmeiFlutterPlugin.aiCamera());
   }
 

@@ -21,7 +21,7 @@ dev_dependencies:
   flutter_common:
     git:
       url: 'https://github.com/asd451398533/flutter_common.git'
-      ref: 'b67cd8d0b92ca27fff9c8ca9169e8e2837960b89'
+      ref: '06d55727aa7358b792c13bbc07bbdb1749eb12ba'
   gengmei_flutter_plugin:
     git:
       url: '/Users/apple/lsy/gengmei_flutter_plugin'

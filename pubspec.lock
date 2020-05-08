@@ -80,8 +80,8 @@ packages:
     dependency: "direct dev"
     description:
       path: "."
-      ref: b67cd8d0b92ca27fff9c8ca9169e8e2837960b89
-      resolved-ref: b67cd8d0b92ca27fff9c8ca9169e8e2837960b89
+      ref: "06d55727aa7358b792c13bbc07bbdb1749eb12ba"
+      resolved-ref: "06d55727aa7358b792c13bbc07bbdb1749eb12ba"
       url: "https://github.com/asd451398533/flutter_common.git"
     source: git
     version: "0.0.1"
@@ -132,6 +132,20 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.2.2"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.6.1+1"
+  logger:
+    dependency: transitive
+    description:
+      name: logger
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.9.1"
   matcher:
     dependency: transitive
     description:
@@ -222,7 +236,7 @@ packages:
       name: rxdart
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.22.6"
+    version: "0.24.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -277,6 +291,34 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.6"
+  url_launcher:
+    dependency: transitive
+    description:
+      name: url_launcher
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.4.5"
+  url_launcher_macos:
+    dependency: transitive
+    description:
+      name: url_launcher_macos
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.1+5"
+  url_launcher_platform_interface:
+    dependency: transitive
+    description:
+      name: url_launcher_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.6"
+  url_launcher_web:
+    dependency: transitive
+    description:
+      name: url_launcher_web
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.1+4"
   vector_math:
     dependency: transitive
     description:
