@@ -13,17 +13,18 @@ dependencies:
   camera: ^0.5.7+4
   image_gallery_saver: ^1.2.2
 
-#  flutter_common:
-#    git:
-#      url: 'https://github.com/asd451398533/flutter_common.git'
-#      ref: '0abdb58403883249ccd556b4f0cdeaaf6e9a3d76'
-#  gengmei_flutter_plugin:
-#    git:
-#      url: '/Users/apple/lsy/gengmei_flutter_plugin'
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_common:
+    git:
+      url: 'https://github.com/asd451398533/flutter_common.git'
+      ref: 'b67cd8d0b92ca27fff9c8ca9169e8e2837960b89'
+  gengmei_flutter_plugin:
+    git:
+      url: '/Users/apple/lsy/gengmei_flutter_plugin'
 
 flutter:
 

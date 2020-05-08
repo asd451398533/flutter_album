@@ -6,7 +6,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_album/repository/AlbumRepository.dart';
-import 'package:flutter_album/util/toast.dart';
+import 'package:flutter_common/commonModel/toast/toast.dart';
 import 'package:flutter_common/flutter_common.dart';
 import 'package:gengmei_flutter_plugin/ScanImagePlugn.dart';
 import 'package:gengmei_flutter_plugin/gengmei_flutter_plugin.dart';

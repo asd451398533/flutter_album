@@ -10,7 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter_album/camera/CameraInstance.dart';
-import 'package:flutter_album/util/toast.dart';
+import 'package:flutter_common/commonModel/toast/toast.dart';
 
 import '../../BaseComponent.dart';
 import 'CameraModel.dart';
