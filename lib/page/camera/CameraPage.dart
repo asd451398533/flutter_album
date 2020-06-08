@@ -56,7 +56,7 @@ class CameraState extends State<CameraPage> with WidgetsBindingObserver {
       CameraDescription nowCamera = beforeCamera
           ? CameraInstance.getInstance().getFontCamera()
           : CameraInstance.getInstance().getBackCamera();
-      controller = CameraController(nowCamera, ResolutionPreset.veryHigh);
+      controller = CameraController(nowCamera, ResolutionPreset.high);
       await controller.initialize();
 
       if (!mounted) {

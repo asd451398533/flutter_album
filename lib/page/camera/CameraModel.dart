@@ -18,11 +18,11 @@ class CameraModel extends BaseModel {
     Directory appDocDir = await getApplicationDocumentsDirectory();
     String savePath =
         "${appDocDir.path}/PIC_${DateTime.now().millisecondsSinceEpoch}.jpeg";
-    String scareSavePath =
-        "${appDocDir.path}/PIC_SCARE_${DateTime.now().millisecondsSinceEpoch}.jpeg";
+//    String scareSavePath =
+//        "${appDocDir.path}/PIC_SCARE_${DateTime.now().millisecondsSinceEpoch}.jpeg";
     await controller.takePicture(savePath);
-    await compute(flipImage, [savePath,scareSavePath,Platform.isAndroid && before?"Y":"N"]);
-    return [savePath,scareSavePath];
+//    await compute(flipImage, [savePath,scareSavePath,Platform.isAndroid && before?"Y":"N"]);
+    return [savePath];
   }
 
   @override
