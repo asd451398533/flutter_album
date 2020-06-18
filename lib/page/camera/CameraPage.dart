@@ -56,7 +56,8 @@ class CameraState extends State<CameraPage> with WidgetsBindingObserver {
       CameraDescription nowCamera = beforeCamera
           ? CameraInstance.getInstance().getFontCamera()
           : CameraInstance.getInstance().getBackCamera();
-      controller = CameraController(nowCamera, ResolutionPreset.high);
+      controller = CameraController(nowCamera, ResolutionPreset.veryHigh,
+          enableAudio: false);
       await controller.initialize();
 
       if (!mounted) {
@@ -223,34 +224,33 @@ class CameraState extends State<CameraPage> with WidgetsBindingObserver {
           child: Opacity(
             opacity: 0.8,
             child: Container(
-              alignment: Alignment.center,
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.width /
-                  controller.value.aspectRatio,
-              decoration: BoxDecoration(color: Colors.grey.shade200),
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    child: Container(),
-                  ),
-                  Container(
-                    width: 30,
-                    height: 30,
-                    child: CircularProgressIndicator(
-                      semanticsLabel: "www",
-                      semanticsValue: "hhh",
+                alignment: Alignment.center,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.width /
+                    controller.value.aspectRatio,
+                decoration: BoxDecoration(color: Colors.grey.shade200),
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 5),
-                    child: baseText("正在加载", 12, Colors.black),
-                  ),
-                  Expanded(
-                    child: Container(),
-                  ),
-                ],
-              )
-            ),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      child: CircularProgressIndicator(
+                        semanticsLabel: "www",
+                        semanticsValue: "hhh",
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 5),
+                      child: baseText("正在加载", 12, Colors.black),
+                    ),
+                    Expanded(
+                      child: Container(),
+                    ),
+                  ],
+                )),
           ),
         ),
       ),
